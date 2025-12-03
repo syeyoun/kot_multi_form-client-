@@ -30,6 +30,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 //import androidx.activity.compose.BackHandler
 //import org.example.testproject.utils.PlatformBackHandler
+import org.example.testproject.utils.BackHandler  // import 추가!
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

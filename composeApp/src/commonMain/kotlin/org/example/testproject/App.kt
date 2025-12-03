@@ -150,6 +150,9 @@ fun App() {
                     },
                     onSignupClick = {
                         authScreen = AuthScreen.SIGNUP
+                    },
+                    onBackClick = {
+                        // 앱 종료 또는 아무것도 안 함
                     }
                 )
             }

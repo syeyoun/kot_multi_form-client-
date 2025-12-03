@@ -29,10 +29,10 @@ kotlin {
         }
     }
     
-    js {
-        browser()
-        binaries.executable()
-    }
+//    js {
+//        browser()
+//        binaries.executable()
+//    }
     
 //    @OptIn(ExperimentalWasmDsl::class)
 //    wasmJs {
@@ -69,11 +69,16 @@ kotlin {
 //            implementation("io.ktor:ktor-client-js:2.3.7")
         }
 
-        val jsMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-js:2.3.7")
-            }
-        }
+//        jsMain.dependencies {
+//            implementation(compose.runtime)  // 추가!
+//            implementation("androidx.activity:activity-compose:1.9.0")
+//        }
+//
+//        val jsMain by getting {
+//            dependencies {
+//                implementation("io.ktor:ktor-client-js:2.3.7")
+//            }
+//        }
 
         commonTest.dependencies {
             implementation(libs.kotlin.test)
