@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 //import androidx.activity.compose.BackHandler
+import org.example.testproject.utils.BackHandler  // import 추가!
 
 @Composable
 fun AuthSelectScreen(
@@ -19,6 +20,8 @@ fun AuthSelectScreen(
     onSignupClick: () -> Unit,
     onBackClick: () -> Unit
 ) {
+    BackHandler(onBack = onBackClick)  // ← 여기 추가!
+
     Box(
         modifier = Modifier
             .fillMaxSize()

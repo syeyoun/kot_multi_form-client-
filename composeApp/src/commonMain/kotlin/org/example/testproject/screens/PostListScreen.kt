@@ -36,6 +36,7 @@ import io.github.jan.supabase.realtime.realtime
 import org.example.testproject.supabase.SupabaseClient
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
+import org.example.testproject.utils.BackHandler  // import 추가!
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -59,6 +60,7 @@ fun PostListScreen(
     var endDate by remember { mutableStateOf("") }
     var showStartDatePicker by remember { mutableStateOf(false) }
     var showEndDatePicker by remember { mutableStateOf(false) }
+    BackHandler(onBack = onBackClick)  // ← 여기 추가!
 
     // 화면 진입시 게시글 로드 + 실시간 구독 (Load posts on screen entry + real-time subscription)
     LaunchedEffect(selectedDistrict.id) {

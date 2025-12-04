@@ -15,6 +15,7 @@ import org.example.testproject.models.District
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.platform.LocalLifecycleOwner
 //import androidx.activity.compose.BackHandler
+import org.example.testproject.utils.BackHandler
 
 @Composable
 fun SelectActionScreen(
@@ -25,6 +26,7 @@ fun SelectActionScreen(
     onBackClick: () -> Unit
 ) {
 //    BackHandler(onBack = onBackClick)
+    BackHandler(onBack = onBackClick)  // ← 여기 추가!
 
     Column(
         modifier = Modifier

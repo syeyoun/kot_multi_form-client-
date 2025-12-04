@@ -29,6 +29,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.combinedClickable
 import org.example.testproject.repository.ApplicationRepository
 import org.example.testproject.repository.PostRepository
+import org.example.testproject.utils.BackHandler
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -52,6 +53,7 @@ fun ChatScreen(
     var isLoading by remember { mutableStateOf(false) }
     var showPostInfo by remember { mutableStateOf(false) }
     var showLeaveDialog by remember { mutableStateOf(false) }
+    BackHandler(onBack = onBackClick)
 
     // 메시지 로드 (Load messages)
     LaunchedEffect(chatRoom.id) {
